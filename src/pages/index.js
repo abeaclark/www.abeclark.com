@@ -219,6 +219,7 @@ class Index extends React.Component {
           <div css={{ marginTop: '10px' }}><a target="_blank" href={'https://www.instagram.com/abe_clark/'}>Instagram</a></div>
           <div css={{ marginTop: '10px' }}><a target="_blank" href={'https://www.linkedin.com/in/abrahamclark/'}>LinkedIn</a></div>
           <div css={{ marginTop: '10px' }}><a target="_blank" href={'https://www.weareclarks.com'}>WeAreClarks | Family Blog</a></div>
+          <div css={{ marginTop: '10px' }}><a target="_blank" href={'https://www.youtube.com/watch?v=Ro90lym1Rdc'}>Family Quarantine Video | Disney Sing-Along</a></div>
           <div css={{ marginTop: '10px' }}><a target="_blank" href={'tel:+16505323496'}>(650) 532-3496</a></div>
           <div css={{ marginTop: '10px' }}><a target="_blank" href={'mailto:abeaclark@gmail.com'}>abeaclark@gmail.com</a></div>
         </div>
@@ -244,7 +245,12 @@ class Index extends React.Component {
           <meta property="twitter:description" content={"Caution: Only cast me if you're ok with me winning."} />
           <meta property="og:title" content="Winner of Survivor 43: Abe Clark" />
           <meta property="og:image" content={"https://media.giphy.com/media/l378ohXSiuBGPdEaI/giphy.gif"} />
-          <meta property="og:image" content={"https://media.giphy.com/media/l378ohXSiuBGPdEaI/giphy.gif"} />
+          <meta property="og:image:type" content="image/gif" />
+          <meta property="og:image:height" content="263" />
+          <meta property="og:video:type" content="video/mp4"/>
+          <meta property="og:video:width" content="480"/>
+          <meta property="og:video:height" content="263" />
+          <meta property="og:video" content="https://i.giphy.com/media/l378ohXSiuBGPdEaI/giphy.mp4"/>
           <meta
             property="twitter:image"
             content={"https://media.giphy.com/media/l378ohXSiuBGPdEaI/giphy.gif"}

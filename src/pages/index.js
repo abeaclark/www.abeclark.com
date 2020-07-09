@@ -169,7 +169,7 @@ class Index extends React.Component {
         </p>
         <List
           style={{ alignSelf: 'stretch', display: 'flex'}}
-          rowHeight={80}
+          rowHeight={60}
           order={this.state.order}
           onReOrder={order => this.setState({order})}
         >

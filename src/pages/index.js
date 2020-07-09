@@ -128,6 +128,12 @@ class Index extends React.Component {
       if (typeof window != 'undefined') {
         window.scrollTo(0,document.body.scrollHeight)
       }
+      if (typeof document != 'undefined') {
+        const element = _.get(document.getElementsByClassName('ytp-large-play-button'), '0')
+        if (element) {
+          element.click()
+        }
+      }
     })
   }
 
@@ -154,7 +160,7 @@ class Index extends React.Component {
     const items = [
       {text: "Made $30k in 3 months selling door to door", order: 2},
       {text: "Talked with 50+ strangers per day for 2yrs in Latvia as a missionary", order: 1},
-      {text: "Traveled to 18 countries in 6 months with my wife and 1yr-old while working full time at night (sleeping 2-3 hrs)", order: 4},
+      {text: "Traveled to 18 countries in 6 months w/ wife & 1yr-old while working full time at night (sleeping 2-3 hrs)", order: 4},
       {text: "Turned down a full-ride to West Point", order: 0},
       {text: "Leading Engineering at a tech startup after teaching myself to code 4yrs ago", order: 5},
       {text: "Networked my way into an Investment Banking job", order: 3},
@@ -188,7 +194,7 @@ class Index extends React.Component {
 
   renderVideo = () => {
     return(
-      <div css={{display: 'flex', alignSelf: 'stretch', flexDirection: 'column'}}>
+      <div css={{display: this.state.showVideo ? 'flex' : 'none', alignSelf: 'stretch', flexDirection: 'column', }}>
         <h1 css={{ textAlign: 'center'}}>
           You win!
         </h1>
@@ -220,7 +226,7 @@ class Index extends React.Component {
           <div css={{ marginTop: '10px' }}><a target="_blank" href={'https://www.instagram.com/abe_clark/'}>Instagram</a></div>
           <div css={{ marginTop: '10px' }}><a target="_blank" href={'https://www.linkedin.com/in/abrahamclark/'}>LinkedIn</a></div>
           <div css={{ marginTop: '10px' }}><a target="_blank" href={'https://www.weareclarks.com'}>WeAreClarks | Family Blog</a></div>
-          <div css={{ marginTop: '10px' }}><a target="_blank" href={'https://www.youtube.com/watch?v=Ro90lym1Rdc'}>Family Quarantine Video | Disney Sing-Along</a></div>
+          <div css={{ marginTop: '10px' }}><a target="_blank" href={'https://www.youtube.com/watch?v=Ro90lym1Rdc'}>Family Quarantine Video</a></div>
           <div css={{ marginTop: '10px' }}><a target="_blank" href={'tel:+16505323496'}>(650) 532-3496</a></div>
           <div css={{ marginTop: '10px' }}><a target="_blank" href={'mailto:abeaclark@gmail.com'}>abeaclark@gmail.com</a></div>
         </div>
@@ -237,7 +243,7 @@ class Index extends React.Component {
     const currentView = stepFunctions[this.state.currentStep]
 
     return (
-      <div css={styles.outer}>
+      <div css={[styles.outer, {minHeight: this.state.showVideo ? '100vh' : '80vh'}]}>
         <Helmet
           title={"Winner of Survivor 43: Abe Clark"}
         >
@@ -259,7 +265,7 @@ class Index extends React.Component {
         </Helmet>
         <div css={styles.inner}>
           {currentView()}
-          {this.state.showVideo && this.renderVideo()}
+          {this.renderVideo()}
         </div>
       </div>
 

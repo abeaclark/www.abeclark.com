@@ -116,7 +116,7 @@ class Index extends React.Component {
   }
 
   onContact = () => {
-    window.open('https://us02web.zoom.us/j/4887098749', '_blank')
+    window.open('tel:+16505323496', '_blank')
   }
 
   onAdvanceStep = () => {

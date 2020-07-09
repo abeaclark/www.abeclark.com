@@ -3,6 +3,7 @@ import { themeStyles, colors } from '../utils/theme'
 import { Link, graphql } from 'gatsby'
 import List from 'react-smooth-draggable-list'
 import _ from 'lodash'
+import Helmet from 'react-helmet'
 
 const styles = {
   outer: {
@@ -235,11 +236,26 @@ class Index extends React.Component {
 
     return (
       <div css={styles.outer}>
+        <Helmet
+          title={"Winner of Survivor 43: Abe Clark"}
+        >
+          <meta property="og:url" content="https://www.abeclark.com" />
+          <meta property="og:description" content={"Caution: Only cast me if you're ok with me winning."} />
+          <meta property="twitter:description" content={"Caution: Only cast me if you're ok with me winning."} />
+          <meta property="og:title" content="Winner of Survivor 43: Abe Clark" />
+          <meta property="og:image" content={"https://media.giphy.com/media/l378ohXSiuBGPdEaI/giphy.gif"} />
+          <meta property="og:image" content={"https://media.giphy.com/media/l378ohXSiuBGPdEaI/giphy.gif"} />
+          <meta
+            property="twitter:image"
+            content={"https://media.giphy.com/media/l378ohXSiuBGPdEaI/giphy.gif"}
+          />
+        </Helmet>
         <div css={styles.inner}>
           {currentView()}
           {this.state.showVideo && this.renderVideo()}
         </div>
       </div>
+
     )
   }
 }

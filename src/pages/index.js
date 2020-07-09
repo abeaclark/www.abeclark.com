@@ -19,7 +19,7 @@ const styles = {
   inner: {
     width: '100%',
     maxWidth: '500px',
-    padding: '20px',
+    padding: '20px 5px',
     alignText: 'center',
     display: 'flex',
     flexDirection: 'column',
@@ -47,7 +47,8 @@ const styles = {
     justifyContent: 'center',
     textAlign: 'center',
     boxShadow: '0 8px 8px 0 rgba(205, 205, 205, 0.5)',
-    minWidth: '300px',
+    width: '100%',
+    fontSize: '0.8em',
 }
 }
 
@@ -152,7 +153,7 @@ class Index extends React.Component {
   renderStep1 = () => {
     const items = [
       {text: "Made $30k in 3 months selling door to door", order: 2},
-      {text: "Cold-contacted 40+ people/day for 2 years in Latvia as a missionary", order: 1},
+      {text: "Talked with 50+ strangers per day for 2yrs in Latvia as a missionary", order: 1},
       {text: "Traveled to 18 countries in 6 months with my wife and 1yr-old while working full time at night (sleeping 2-3 hrs)", order: 4},
       {text: "Turned down a full-ride to West Point", order: 0},
       {text: "Leading Engineering at a tech startup after teaching myself to code 4yrs ago", order: 5},
@@ -160,11 +161,11 @@ class Index extends React.Component {
     ]
     return (
       <div css={{display: 'flex', alignSelf: 'stretch', flexDirection: 'column'}}>
-        <h1 css={{ textAlign: 'center'}}>
+        <h3 css={{ textAlign: 'center', color: 'white'}}>
           First, prove you want it
-        </h1>
+        </h3>
         <p css={{ textAlign: 'center'}}>
-          Organize these life events to view the video
+          Order these life events
         </p>
         <List
           style={{ alignSelf: 'stretch', display: 'flex'}}

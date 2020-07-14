@@ -250,8 +250,6 @@ class Index extends React.Component {
           <meta property="og:url" content="https://www.abeclark.com" />
           <meta property="og:title" content={"Winner of Survivor 43: Abe Clark"} />
           <meta property="og:description" content={"Caution: Only cast me if you're ok with me winning."} />
-          <meta property="twitter:description" content={"Caution: Only cast me if you're ok with me winning."} />
-          <meta property="og:title" content="Winner of Survivor 43: Abe Clark" />
           <meta property="og:image" content={"https://media.giphy.com/media/l378ohXSiuBGPdEaI/giphy.gif"} />
           <meta property="og:image:type" content="image/gif" />
           <meta property="og:image:height" content="263" />
@@ -259,10 +257,6 @@ class Index extends React.Component {
           <meta property="og:video:width" content="480"/>
           <meta property="og:video:height" content="263" />
           <meta property="og:video" content="https://i.giphy.com/media/l378ohXSiuBGPdEaI/giphy.mp4"/>
-          <meta
-            property="twitter:image"
-            content={"https://media.giphy.com/media/l378ohXSiuBGPdEaI/giphy.gif"}
-          />
         </Helmet>
         <div css={styles.inner}>
           {currentView()}

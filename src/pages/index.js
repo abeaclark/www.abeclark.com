@@ -248,6 +248,7 @@ class Index extends React.Component {
           title={"Winner of Survivor 43: Abe Clark"}
         >
           <meta property="og:url" content="https://www.abeclark.com" />
+          <meta property="og:title" content={"Winner of Survivor 43: Abe Clark"} />
           <meta property="og:description" content={"Caution: Only cast me if you're ok with me winning."} />
           <meta property="twitter:description" content={"Caution: Only cast me if you're ok with me winning."} />
           <meta property="og:title" content="Winner of Survivor 43: Abe Clark" />
